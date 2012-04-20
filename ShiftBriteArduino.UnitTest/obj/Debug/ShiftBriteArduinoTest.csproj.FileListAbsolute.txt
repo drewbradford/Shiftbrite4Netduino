@@ -1,0 +1,5 @@
+D:\projects\ShiftBriteArduino\ShiftBriteArduinoTest\bin\Debug\ShiftBriteArduinoTest.dll
+D:\projects\ShiftBriteArduino\ShiftBriteArduinoTest\bin\Debug\ShiftBriteArduinoTest.pdb
+D:\projects\ShiftBriteArduino\ShiftBriteArduinoTest\obj\Debug\ResolveAssemblyReference.cache
+D:\projects\ShiftBriteArduino\ShiftBriteArduinoTest\obj\Debug\ShiftBriteArduinoTest.dll
+D:\projects\ShiftBriteArduino\ShiftBriteArduinoTest\obj\Debug\ShiftBriteArduinoTest.pdb
