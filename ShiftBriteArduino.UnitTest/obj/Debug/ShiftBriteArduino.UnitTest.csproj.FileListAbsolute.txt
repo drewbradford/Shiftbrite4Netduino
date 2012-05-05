@@ -11,3 +11,11 @@ D:\Projects\ShiftBriteArduino\ShiftBriteArduino.UnitTest\obj\Debug\ShiftBriteArd
 D:\Projects\ShiftBriteArduino\ShiftBriteArduino.UnitTest\bin\Debug\Moq.dll
 D:\Projects\ShiftBriteArduino\ShiftBriteArduino.UnitTest\bin\Debug\Moq.pdb
 D:\Projects\ShiftBriteArduino\ShiftBriteArduino.UnitTest\bin\Debug\Moq.xml
+C:\Users\dlindmark\Desktop\ShiftBriteArduino\ShiftBriteArduino\ShiftBriteArduino.UnitTest\bin\Debug\ShiftBriteArduinoTest.dll
+C:\Users\dlindmark\Desktop\ShiftBriteArduino\ShiftBriteArduino\ShiftBriteArduino.UnitTest\bin\Debug\ShiftBriteArduinoTest.pdb
+C:\Users\dlindmark\Desktop\ShiftBriteArduino\ShiftBriteArduino\ShiftBriteArduino.UnitTest\bin\Debug\Moq.dll
+C:\Users\dlindmark\Desktop\ShiftBriteArduino\ShiftBriteArduino\ShiftBriteArduino.UnitTest\bin\Debug\Moq.pdb
+C:\Users\dlindmark\Desktop\ShiftBriteArduino\ShiftBriteArduino\ShiftBriteArduino.UnitTest\bin\Debug\Moq.xml
+C:\Users\dlindmark\Desktop\ShiftBriteArduino\ShiftBriteArduino\ShiftBriteArduino.UnitTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dlindmark\Desktop\ShiftBriteArduino\ShiftBriteArduino\ShiftBriteArduino.UnitTest\obj\Debug\ShiftBriteArduinoTest.dll
+C:\Users\dlindmark\Desktop\ShiftBriteArduino\ShiftBriteArduino\ShiftBriteArduino.UnitTest\obj\Debug\ShiftBriteArduinoTest.pdb

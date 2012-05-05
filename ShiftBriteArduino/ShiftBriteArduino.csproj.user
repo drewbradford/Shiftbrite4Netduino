@@ -5,4 +5,8 @@
     <DeployDevice>NetduinoPlus</DeployDevice>
     <MF_GenerateStubs>True</MF_GenerateStubs>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DeployTransport>USB</DeployTransport>
+    <DeployDevice>NetduinoPlus</DeployDevice>
+  </PropertyGroup>
 </Project>

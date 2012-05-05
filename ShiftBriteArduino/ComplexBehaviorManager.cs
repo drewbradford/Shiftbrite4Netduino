@@ -17,18 +17,89 @@ namespace ShiftBriteArduino
         {
             for(int i = 0; i < cycles; i++)
             {
-                _rgbManager.FillColor(LedColor.GetRed);
-                _rgbManager.PushArrayToDisplay();
+                // This is a speed test
+                /*
+                for (int iLoop = 0; iLoop < 10000; iLoop++)
+                {
+                    _rgbManager.PushArrayToDisplay();                   
+                    
+                    _rgbManager.FillColor(LedColor.GetRed);
+                    _rgbManager.PushArrayToDisplay();                   
 
+                    _rgbManager.FillColor(LedColor.GetGreen);
+                    _rgbManager.PushArrayToDisplay();                    
+
+                    _rgbManager.FillColor(LedColor.GetBlue);
+                    _rgbManager.PushArrayToDisplay();
+                     
+                }
+                */
+
+                for (int iLoop = 0; iLoop < 20; iLoop++)
+                {
+                    _rgbManager.FillColor(LedColor.GetRed);
+                    _rgbManager.PushArrayToDisplay();
+
+                    Thread.Sleep(delay);
+
+                    _rgbManager.FillColor(LedColor.GetGreen);
+                    _rgbManager.PushArrayToDisplay();
+
+                    Thread.Sleep(delay);
+
+                    _rgbManager.FillColor(LedColor.GetBlue);
+                    _rgbManager.PushArrayToDisplay();
+                    Thread.Sleep(delay);
+                }
+
+                _rgbManager.UpdateSingleBank(0, LedColor.GetRed);
+                _rgbManager.UpdateSingleBank(1, LedColor.GetBlue);
+                _rgbManager.PushArrayToDisplay();
+                Thread.Sleep(delay);
+
+                _rgbManager.UpdateSingleBank(0, LedColor.GetGreen);
+                _rgbManager.UpdateSingleBank(1, LedColor.GetRed);
+                _rgbManager.PushArrayToDisplay();
+                Thread.Sleep(delay);
+
+
+                // Seann, the 0 Channel index is the furthest LED out, the 1 index is the next closest to the Arduino
+                // This was backwards of what I was thinking, but it makes sense.
+                _rgbManager.UpdateSingleChannel(0, 0, LedColor.GetRed);
+                _rgbManager.UpdateSingleChannel(0, 1, LedColor.GetGreen);
+                _rgbManager.UpdateSingleChannel(1, 0, LedColor.GetBlue);
+                _rgbManager.UpdateSingleChannel(1, 1, LedColor.GetRed);
+                _rgbManager.PushArrayToDisplay();
                 Thread.Sleep(delay);
 
                 _rgbManager.FillColor(LedColor.GetGreen);
                 _rgbManager.PushArrayToDisplay();
 
+                _rgbManager.UpdateSingleCrossSection(0, LedColor.GetRed);
+                _rgbManager.UpdateSingleCrossSection(1, LedColor.GetBlue);
+                _rgbManager.PushArrayToDisplay();
                 Thread.Sleep(delay);
 
-                _rgbManager.FillColor(LedColor.GetBlue);
-                _rgbManager.PushArrayToDisplay();
+                for (int iLoop = 0; iLoop < 10000; iLoop++)
+                {
+                    _rgbManager.UpdateSingleCrossSection(0, LedColor.GetRed);
+                    _rgbManager.UpdateSingleCrossSection(1, LedColor.GetBlue);
+                    _rgbManager.PushArrayToDisplay();
+
+                    _rgbManager.UpdateSingleCrossSection(0, LedColor.GetGreen);
+                    _rgbManager.UpdateSingleCrossSection(1, LedColor.GetRed);
+                    _rgbManager.PushArrayToDisplay();
+
+                    _rgbManager.UpdateSingleCrossSection(0, LedColor.GetBlue);
+                    _rgbManager.UpdateSingleCrossSection(1, LedColor.GetGreen);
+                    _rgbManager.PushArrayToDisplay();                    
+                }
+
+               
+               // Thread.Sleep(delay);
+
+               // _rgbManager.FillColor(LedColor.GetWhite);
+               // _rgbManager.PushArrayToDisplay();
 
                 Thread.Sleep(delay);
             }

@@ -15,7 +15,7 @@ namespace ShiftBriteArduino
 
 
         private const int NUM_BANKS = 2;
-        private const int NUM_CHANNELS = 1;
+        private const int NUM_CHANNELS = 2 ;
 
         public static void Main()
         {
@@ -27,17 +27,35 @@ namespace ShiftBriteArduino
 
             IOutputPort bankZeroDataPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.GPIO_PIN_D0, false));
             IOutputPort bankOneDataPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.GPIO_PIN_D1, false));
+            IOutputPort bankTwoDataPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.GPIO_PIN_D2, false));
+            IOutputPort bankThreeDataPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.GPIO_PIN_D3, false));
+            IOutputPort bankFourDataPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.GPIO_PIN_D4, false));
+            IOutputPort bankFiveDataPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.GPIO_PIN_D5, false));
+            IOutputPort bankSixDataPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.GPIO_PIN_D8, false));
+            IOutputPort bankSevenDataPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.GPIO_PIN_D9, false));
+            IOutputPort bankEightDataPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.GPIO_PIN_D10, false));
+
             IOutputPort ledPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.ONBOARD_LED, false));
 
             var portLayout = new PortLayout
                 {                    
-                    DataPorts = new[] { bankZeroDataPort, bankOneDataPort},
+                    DataPorts = new[] { bankZeroDataPort,
+                                        bankOneDataPort, 
+                                        bankTwoDataPort,
+                                        bankThreeDataPort,
+                                        bankFourDataPort,
+                                        bankFiveDataPort,
+                                        bankSixDataPort,
+                                        bankSevenDataPort,
+                                        bankEightDataPort
+                                        },
                     ClockPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.GPIO_PIN_D6, false)),
                     LatchPort = new OutputPort(new Microsoft.SPOT.Hardware.OutputPort(Pins.GPIO_PIN_D7, false))
                 };
 
             var logger = new Logger(ledPort);
             var portManager = new PortManager(portLayout, logger);
+            portManager.setBanks(NUM_BANKS); // DDL, you can move this later
             var rgbManager = new RgbManager(portManager, NUM_BANKS, NUM_CHANNELS);
             var complexBehaviorManager = new ComplexBehaviorManager(rgbManager, logger);
 

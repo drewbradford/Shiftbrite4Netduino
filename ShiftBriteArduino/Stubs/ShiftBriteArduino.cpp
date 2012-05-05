@@ -108,12 +108,16 @@ static const CLR_RT_MethodHandler method_lookup[] =
     NULL,
     NULL,
     NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
 };
 
 const CLR_RT_NativeAssemblyData g_CLR_AssemblyNative_ShiftBriteArduino =
 {
     "ShiftBriteArduino", 
-    0xA7A27D20,
+    0x332D9790,
     method_lookup
 };
 

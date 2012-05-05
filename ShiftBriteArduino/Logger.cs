@@ -46,7 +46,7 @@ namespace ShiftBriteArduino
         public void LogLight()
         {
             _ledPort.Write(true);
-            Thread.Sleep(100);
+            //Thread.Sleep(100); // DDL
             _ledPort.Write(false);
         }
     }

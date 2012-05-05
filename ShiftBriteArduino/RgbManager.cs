@@ -120,6 +120,7 @@ namespace ShiftBriteArduino
         {
             //for jagged arrays, we could pad with dummy packets on the end to even out the array into a square
 
+            
             for (int channel = 0; channel < NumChannels; channel++)
             {
                 var colorPackets = new CommandPacket[NumBanks];
@@ -130,12 +131,14 @@ namespace ShiftBriteArduino
                     colorPackets[bank] = CreateColorPacket(bank, _rgbArray[bank][channel][0], _rgbArray[bank][channel][1], _rgbArray[bank][channel][2]);
                     controlPackets[bank] = CreateControlPacket();
                 }
-
                 _portManager.SendPacketArray(colorPackets);
-                _portManager.Latch();
-                //_portManager.SendPacketArray(controlPackets);
-                //_portManager.Latch();
-            }                    
+            }
+
+            
+            _portManager.Latch();
+
+            //_portManager.SendPacketArray(controlPackets);
+            //_portManager.Latch();
         }
 
         /// <summary>

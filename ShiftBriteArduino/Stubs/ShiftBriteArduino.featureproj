@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <FeatureName>ShiftBriteArduino</FeatureName>
-    <Guid>{6daba1dd-d55e-4f3c-9e7c-008fdece7fd4}</Guid>
+    <Guid>{5ef695f4-db40-48ef-a44b-4105a46ad067}</Guid>
     <Description />
     <Groups />
   </PropertyGroup>
@@ -10,6 +10,6 @@
     <DriverLibs Include="ShiftBriteArduino.$(LIB_EXT)" />
     <InteropFeature Include="ShiftBriteArduino" />
     <MMP_DAT_CreateDatabase Include="$(BUILD_TREE_CLIENT)\pe\ShiftBriteArduino.pe" />
-    <RequiredProjects Include="C:\Projects\ShiftBriteArduino\ShiftBriteArduino\Stubs\dotnetmf.proj" />
+    <RequiredProjects Include="C:\Users\dlindmark\Desktop\ShiftBriteArduino\ShiftBriteArduino\ShiftBriteArduino\Stubs\dotnetmf.proj" />
   </ItemGroup>
 </Project>

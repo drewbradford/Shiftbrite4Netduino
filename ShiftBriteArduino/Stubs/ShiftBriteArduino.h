@@ -74,6 +74,7 @@ struct Library_ShiftBriteArduino_ShiftBriteArduino_IO_PortManager
     static const int FIELD___portLayout = 1;
     static const int FIELD___logger = 2;
     static const int FIELD___latchDelayOffset = 3;
+    static const int FIELD___iNumBanks = 4;
 
 
     //--//
